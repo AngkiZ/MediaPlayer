@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing">
+
+    <TextView
+        android:id="@+id/textViewSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:text="Music"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/btListview"
+        android:layout_centerHorizontal="true" />
+
+
+    <TextView
+        android:id="@+id/textViewSinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#80FFFFFF"
+        android:textSize="15sp"
+        android:text="Play"
+        android:layout_below="@+id/textViewSong"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:id="@+id/start"
+        android:onClick="Start"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/start"
+        android:layout_marginTop="25dp"
+        android:layout_alignTop="@+id/pgbTime"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btWays"
+        android:onClick="MusicMode"
+        android:background="@drawable/shunxu"
+        android:layout_above="@+id/start"
+        android:layout_alignLeft="@+id/start"
+        android:layout_alignStart="@+id/start" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:onClick="Next"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_skip_next_white_48dp"
+        android:layout_alignTop="@+id/start"
+        android:layout_alignRight="@+id/mImageView"
+        android:layout_alignEnd="@+id/mImageView" />
+
+
+    <ImageView
+        android:id="@+id/last"
+        android:onClick="Last"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_skip_previous_white_48dp"
+        android:layout_alignTop="@+id/start"
+        android:layout_alignLeft="@+id/mImageView"
+        android:layout_alignStart="@+id/mImageView" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/btListview"
+        android:onClick="Listview"
+        android:background="@drawable/ic_playlist_music_black_24dp"
+        android:layout_alignParentTop="true"
+         />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_width="255dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pgbTime"
+        android:layout_gravity="bottom"
+        android:layout_weight="1"
+        android:indeterminate="false"
+        android:layout_marginBottom="146dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="230dp"
+        android:id="@+id/mImageView"
+        android:onClick="ChangeView"
+        android:background="@drawable/mimageview1"
+        android:layout_above="@+id/btWays"
+        android:layout_alignRight="@+id/pgbTime"
+        android:layout_alignEnd="@+id/pgbTime" />
+
+</RelativeLayout>
